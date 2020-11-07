@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<title>CSSS Fall Hack 2020</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}" type="text/css" media="all">
+</head>
+<body onload="startup()">
+    <div class="contentArea">
+        <p>cat and or dog</p>
+        <img id="photo" src={{ data }}>
+        <br>
+        <form method="GET" action="/" id="dataForm">
+            <input type="submit" value="Another one!">
+        </form>
+        <!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script src="{{url_for('static', filename='js/capture.js')}}"></script> -->
+    </div>
+</body>
+</html>

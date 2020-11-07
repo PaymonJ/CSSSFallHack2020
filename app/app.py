@@ -14,4 +14,4 @@ def evaluate():
         imgDataPNG = base64.b64decode(imgDataB64[22:])
         with open("original.png","wb") as fo:
                 fo.write(imgDataPNG)
-        return "<h1>Hi, Karan!</h1>"
+        return render_template('result.html', data=imgDataB64)

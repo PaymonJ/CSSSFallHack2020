@@ -2,7 +2,7 @@
   display:none;
 }
 
-#video, #canvas {
+#video, #canvas, #photo {
   width: 95%;
 }
 
