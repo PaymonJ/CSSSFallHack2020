@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}" type="text/css" media="all">
 </head>
 <body onload="startup()">
-    <video id="video" autoplay></video>
-    <canvas id="canvas"></canvas>
-    <button id="takePhotoButton" onclick="takePhoto()">Take Photo</button>
-    <button id="retakePhotoButton" onclick="retakePhoto()">Retake</button>
-    <button id="evaluate" onclick="evaluate()">Evaluate</button>
-    <img id="img" src="">
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="{{url_for('static', filename='js/capture.js')}}"></script>
+    <div class="contentArea">
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+        <br>
+        <button id="takePhotoButton" onclick="takePhoto()">Take Photo</button>
+        <button id="retakePhotoButton" onclick="retakePhoto()">Retake</button>
+        <button id="evaluate" onclick="evaluate()">Evaluate</button>
+        <img id="img" src="">
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script src="{{url_for('static', filename='js/capture.js')}}"></script>
+    </div>
 </body>
 </html>

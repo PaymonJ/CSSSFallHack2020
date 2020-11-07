@@ -17,14 +17,14 @@ function takePhoto() {
 
     video.style.display = "none";
     takePhotoButton.style.display = "none";
-    canvas.style.display = "block";
-    retakePhotoButton.style.display = "block";
-    evaluate.style.display = "block";
+    canvas.style.display = "inline";
+    retakePhotoButton.style.display = "inline";
+    evaluate.style.display = "inline";
 }
 
 function retakePhoto() {
-    video.style.display = "block";
-    takePhotoButton.style.display = "block";
+    video.style.display = "inline";
+    takePhotoButton.style.display = "inline";
     canvas.style.display = "none";
     retakePhotoButton.style.display = "none";
     evaluate.style.display = "none";
