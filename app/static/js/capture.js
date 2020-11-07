@@ -1,20 +1,8 @@
-var front = false;
+var gum = mode => 
+  navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', aspectRatio: 4 / 3}})
+  .then(stream => (video.srcObject = stream))
+  .catch(e => log(e));
 
-function startup() {
-    console.log("hello")
-    const constraints = {
-        video: {facingMode: {exact: "environment"}},
-    };
+var stop = () => video.srcObject && video.srcObject.getTracks().map(t => t.stop());
 
-    const video = document.querySelector('video');
-
-    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {video.srcObject = stream});
-}
-
-function changeCamera() {
-    document.getElementById('flip-button').onclick = function() { front = !front; };
-    var constraints = { video: { facingMode: (front? "user" : "environment") } };
-    const video = document.querySelector('video');
-
-    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {video.srcObject = stream});
-}
+var log = msg => div.innerHTML += "<p>" + msg + "</p>";
