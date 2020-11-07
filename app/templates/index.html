@@ -3,15 +3,21 @@
 <head>
 	<title>CSSS Fall Hack 2020</title>
     <meta charset='utf-8'>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}" type="text/css" media="all">
 </head>
 <body>
     <video id="video" autoplay></video>
+    <button id="takePhoto" onclick="takePhoto()">Take Photo</button>
+    <img id="img" src="">
+    <canvas id="canvas"></canvas>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <!-- <script src="{{url_for('static', filename='js/capture.js')}}"></script> -->
+    
     <script>
+        const img = document.querySelector('#screenshot img');
         const video = document.querySelector('video');
         navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', aspectRatio: 4 / 3}})
         .then((stream) => {video.srcObject = stream});
     </script>
+    <script src="{{url_for('static', filename='js/capture.js')}}"></script>
 </body>
 </html>
