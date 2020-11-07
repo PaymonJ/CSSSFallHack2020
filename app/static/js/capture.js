@@ -1,8 +1,7 @@
 function startup() {
     console.log("hello")
     const constraints = {
-        video: true,
-        facingMode: {exact: "environment"}
+        video: {exact: "environment"},
     };
 
     const video = document.querySelector('video');
