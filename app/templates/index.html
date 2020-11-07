@@ -8,7 +8,9 @@
 <body onload="startup()">
     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>
-    <button id="takePhoto" onclick="takePhoto()">Take Photo</button>
+    <button id="takePhotoButton" onclick="takePhoto()">Take Photo</button>
+    <button id="retakePhotoButton" onclick="retakePhoto()">Retake</button>
+    <button id="evaluate" onclick="evaluate()">Evaluate</button>
     <img id="img" src="">
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script src="{{url_for('static', filename='js/capture.js')}}"></script>
