@@ -6,6 +6,16 @@
   width: 95%;
 }
 
+#takePhotoButton, #anotherPhotoButton {
+  width: 70%;
+  height: 50px;
+}
+
+#retakePhotoButton, #evaluateButton {
+  width: 35%;
+  height: 50px;
+}
+
 .contentArea {
   text-align: center;
   font-size: 16px;
