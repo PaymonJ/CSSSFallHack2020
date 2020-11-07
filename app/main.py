@@ -1,7 +1,8 @@
 from flask import Flask 
   
-app = Flask(__name__) 
+app = Flask(__name__, template_folder='templates')
   
-@app.route("/") 
-def home_view(): 
-        return "<h1>Welcome to Geeks for Geeks</h1>"
+@app.route("/")
+@app.route('/index')
+def index(): 
+        return render_template('index.html')
