@@ -5,9 +5,23 @@
     <meta charset='utf-8'>
 </head>
 <body>
-    <video autoplay></video>
+    <!-- <video autoplay></video> -->
     <!-- <button id="flip-button" onclick="changeCamera()">Change Camera</button> -->
+    <button onclick="stop();gum('user')">Front</button>
+    <button onclick="stop();gum('environment')">Back</button>
+    <div id="div"></div><br>
+    <video id="video" height="320" autoplay></video>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="{{url_for('static', filename='js/capture.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename='js/capture.js')}}"></script> -->
+    <script>
+        var gum = mode => 
+        navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', aspectRatio: 4 / 3}})
+        .then(stream => (video.srcObject = stream))
+        .catch(e => log(e));
+
+        var stop = () => video.srcObject && video.srcObject.getTracks().map(t => t.stop());
+
+        var log = msg => div.innerHTML += "<p>" + msg + "</p>";
+    </script>
 </body>
 </html>
