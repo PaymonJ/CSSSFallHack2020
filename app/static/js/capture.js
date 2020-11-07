@@ -5,7 +5,7 @@ const retakePhotoButton = document.getElementById("retakePhotoButton");
 const evaluate = document.getElementById("evaluate");
 
 function startup() {
-    navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', aspectRatio: 4 / 3}})
+    navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', width: 200, height: 200}})
     .then((stream) => {video.srcObject = stream});
 }
 
