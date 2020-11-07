@@ -1,7 +1,6 @@
 function startup() {
-    const constraints = {
-        video: true
-    };
+    console.log("hello")
+    const constraints = {video: true};
 
     const video = document.querySelector('video');
 
