@@ -1,9 +1,9 @@
-#canvas, #retakePhotoButton, #evaluate {
+#canvas, #retakePhotoButton, #evaluateButton {
   display:none;
 }
 
-#video {
-  width: 80%;
+#video, #canvas {
+  width: 95%;
 }
 
 .contentArea {
