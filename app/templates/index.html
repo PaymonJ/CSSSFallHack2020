@@ -14,7 +14,7 @@
         <button id="retakePhotoButton" onclick="retakePhoto()">Retake</button>
         <button id="evaluateButton" onclick="evaluateAnimal()">Evaluate</button>
         <img id="img" src="">
-        <form method="POST" action="evaluate">
+        <form method="POST" action="/evaluate" id="dataForm">
             <input type="hidden" id="imageData">
         </form>
         <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>

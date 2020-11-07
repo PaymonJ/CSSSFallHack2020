@@ -7,6 +7,6 @@ app = Flask(__name__, template_folder='templates')
 def index(): 
         return render_template('index.html')
 
-@app.route('/evaluate')
+@app.route('/evaluate', methods = ['POST'])
 def evaluate(): 
         return "<h1>Hi, Karan!</h1>"

@@ -4,6 +4,7 @@ const takePhotoButton = document.getElementById("takePhotoButton");
 const retakePhotoButton = document.getElementById("retakePhotoButton");
 const evaluateButton = document.getElementById("evaluateButton");
 const imageData = document.getElementById("imageData");
+const dataForm = document.getElementById("dataForm");
 
 function startup() {
     navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', width: 200, height: 200}})
@@ -33,5 +34,5 @@ function retakePhoto() {
 
 function evaluateAnimal() {
     imageData.value = canvas.toDataURL('image/png');
-    console.log(imageData.value);
+    document.getElementById("dataForm").submit();
 }
