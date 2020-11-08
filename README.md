@@ -10,6 +10,7 @@ Requirements: `python 3+`, `pipenv`, knowing the local ip address of your comput
 1. `cd` into repository
 1. Run `pipenv install`
 1. Run `pipenv shell`
+1. Run `flask run --cert=adhoc --host=0.0.0.0`
 1. Navigate to `https://<YOUR_COMPUTERIP>:5000` on your phone
     * Bypass any security errors as needed
 1. Have fun!
