@@ -24,18 +24,19 @@ def create_model():
     # print(model.summary())
     return model
 
-
-
+def processImage(image):
+    '''takes an image and converts it into a format that the model can read'''
+    img = [img_to_array(load_img(image, target_size=(IMG_SIZE, IMG_SIZE)))]
+    return np.array(img)
 
 if __name__ == '__main__':
     model = create_model()
-    # test the model
-    testimg = "input\\train\\train\\dog.0.jpg"
-    image = []
-    image.append(img_to_array(load_img(testimg, target_size=(IMG_SIZE, IMG_SIZE))))
-    img = np.array(image)
-
-    print(img.shape)
-    result = model(img)
-    print(result)
+    testImg = "cat.51.jpg"
+    pImg = processImage(testImg)
+    result = model(pImg).numpy()
+    fullResults = {
+        "cat":result[0][0],
+        "dog":result[0][1]
+    }
+    print(fullResults)
     pass
