@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 flask = "*"
 gunicorn = "*"
+tensorflow = "*"
+keras = "*"
+numpy = "*"
+pillow = "*"
 
 [dev-packages]
 

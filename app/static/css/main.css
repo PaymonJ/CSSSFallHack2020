@@ -18,6 +18,10 @@
   font-size: 72px;
 }
 
+#result {
+  font-size: 64px;
+}
+
 .contentArea {
   text-align: center;
   font-size: 16px;
