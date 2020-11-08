@@ -24,10 +24,10 @@ def evaluate():
         if model_result[0][0] > model_result[0][1]:
                 percentage = model_result[0][0] * 100
                 percentage = str(round(percentage, 2))
-                result += percentage + " sure this is a cat."
+                result += percentage + "% sure this is a cat."
         else:
                 percentage = model_result[0][1] * 100
                 percentage = str(round(percentage, 2))
-                result += percentage + "% sure this is a dog."
+                result += percentage + "%  sure this is a dog."
         return render_template('result.html', result=result, data=imgDataB64)
 
