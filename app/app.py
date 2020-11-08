@@ -27,7 +27,7 @@ def evaluate():
                 "cat": model_result[0][0],
                 "dog": model_result[0][1]
         }
-        print(model_result)
+        print(fullResults)
 
         return render_template('result.html', data=imgDataB64)
 
